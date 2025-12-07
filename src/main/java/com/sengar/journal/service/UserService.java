@@ -15,6 +15,8 @@ public class UserService {
     private UserRepository userRepository;
 
     public List<User> getAllUsers() { return userRepository.findAll(); }
+
     public void saveEntry(User user) { userRepository.save(user); }
+
     public Optional<User> findByUsername(String username) { return userRepository.findByUsername(username); }
 }
